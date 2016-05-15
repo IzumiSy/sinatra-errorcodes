@@ -21,7 +21,7 @@ module HTTPError
     MESSAGE = "Service Unavailable"
   end
 
-  class GatewayTimeout < StadardError
+  class GatewayTimeout < ErrorBase
     CODE = 504
     MESSAGE = "Gateway Timeout"
   end
