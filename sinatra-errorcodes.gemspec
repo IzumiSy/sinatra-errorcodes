@@ -1,5 +1,5 @@
 # coding: utf-8
-require 'sinatra/errorcodes/version'
+require File.expand_path('../lib/sinatra/errorcodes/version', __FILE__)
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  s.add_dependency 'sinatra'
+  spec.add_dependency 'sinatra'
 
   spec.add_development_dependency 'bundler', '~> 1.12'
   spec.add_development_dependency 'rake',    '~> 10.0'
