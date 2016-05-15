@@ -1,4 +1,5 @@
 # Sinatra::Errorcodes
+Gem of HTTP error status code class pack
 
 ## Installation
 
