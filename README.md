@@ -15,6 +15,17 @@ Or install it yourself as:
 $ gem install sinatra-errorcodes
 ```
 
+## Example
+
+Install gems
+```bash
+$ bundle install
+```
+and run it
+```bash
+$ rackup -p 3000
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/IzumiSy/sinatra-errorcodes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
