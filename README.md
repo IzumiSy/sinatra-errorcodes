@@ -1,5 +1,6 @@
 # Sinatra::Errorcodes
-Gem of HTTP error status code class pack
+[![Gem Version](https://badge.fury.io/rb/sinatra-errorcodes.svg)](https://badge.fury.io/rb/sinatra-errorcodes)
+> Gem of HTTP error status code class pack
 
 ## Installation
 
