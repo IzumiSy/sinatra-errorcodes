@@ -1,4 +1,6 @@
-class MainController < Sinatra::Base
+require_relative './base'
+
+class MainController < BaseController
   get '/badrequest' do
     HTTPError::BadRequest.new()
   end

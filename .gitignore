@@ -1,6 +1,8 @@
 *.gem
 Gemfile.lock
 
+.byebug_history
+
 /.bundle/
 /.yardoc
 /_yardoc/
