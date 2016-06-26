@@ -1,6 +1,7 @@
 *.gem
 Gemfile.lock
-example/.byebug_history
+
+.byebug_history
 
 /.bundle/
 /.yardoc
