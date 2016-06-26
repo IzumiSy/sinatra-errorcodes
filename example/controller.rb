@@ -1,3 +1,5 @@
+require_relative './base'
+
 class MainController < BaseController
   get '/badrequest' do
     raise HTTPError::BadRequest
