@@ -1,11 +1,9 @@
-require_relative './base'
-
-class MainController < BaseController
+class MainController < Sinatra::Base
   get '/badrequest' do
-    raise HTTPError::BadRequest
+    HTTPError::BadRequest.new()
   end
 
   get '/error' do
-    raise HTTPError::InternalServerError
+    HTTPError::InternalServerError.new()
   end
 end

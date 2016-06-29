@@ -2,6 +2,7 @@
 Gemfile.lock
 
 .byebug_history
+example/.byebug_history
 
 /.bundle/
 /.yardoc
