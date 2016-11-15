@@ -8,4 +8,8 @@ class MainController < BaseController
   get '/error' do
     raise HTTPError::InternalServerError
   end
+
+  get '/custom' do
+    raise HTTPError::InternalServerError, "Custom error message"
+  end
 end
