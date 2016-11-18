@@ -8,7 +8,7 @@
 ## Table of Contents
 - [Installation](#Installation)
 - [Example](#Example)
-- [Teset](#Test)
+- [Test](#Test)
 - [Contribute](#Contribute)
 - [License](#License)
 
