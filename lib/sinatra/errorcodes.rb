@@ -3,6 +3,7 @@ require 'sinatra/errorcodes/version'
 
 require_relative '../4xx_errors.rb'
 require_relative '../5xx_errors.rb'
+require_relative '../methods.rb'
 
 module Sinatra
   include HTTPError
