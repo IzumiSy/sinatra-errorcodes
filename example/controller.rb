@@ -12,4 +12,8 @@ class MainController < BaseController
   get '/custom' do
     raise HTTPError::InternalServerError, "Custom error message"
   end
+
+  get '/general_error' do
+    undefined_method
+  end
 end
