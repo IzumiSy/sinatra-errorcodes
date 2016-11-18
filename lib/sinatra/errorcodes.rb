@@ -3,15 +3,18 @@ require 'sinatra/errorcodes/version'
 
 require_relative '../4xx_errors.rb'
 require_relative '../5xx_errors.rb'
-require_relative '../methods.rb'
+require_relative '../error_base.rb'
 
 module Sinatra
   include HTTPError
 
   module Errorcodes
-    def self.registered(app)
-      # TODO: Here overrides error do ... end section
-      # in order to set up exception handlings.
+    def handle_errorcode(e)
+      if e.is_a? ErrorBase
+        halt e.code, e.message
+      end
     end
   end
+
+  helpers Errorcodes
 end
