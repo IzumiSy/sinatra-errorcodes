@@ -37,9 +37,8 @@ $ bundle exec rackup -p 3000
 ```
 
 ## Test
-Default task in Rakefile is test
 ```bash
-$ bundle exec rake
+$ bundle exec rake spec
 ```
 
 ## Contribute
