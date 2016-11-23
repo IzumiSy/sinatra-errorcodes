@@ -4,7 +4,6 @@
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 > Gem of HTTP error status code class pack
 
-=======
 ## Table of Contents
 - [Installation](#Installation)
 - [Example](#Example)
