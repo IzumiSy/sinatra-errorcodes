@@ -2,32 +2,52 @@ require_relative "./error_base"
 
 module HTTPError
   class InternalServerError < ErrorBase
-    CODE = 500
-    MESSAGE = "Internal Server Error"
-  end
-
-  class NotImplemented < ErrorBase
-    CODE = 501
-    MESSAGE = "Not Impemented"
+    CODE = Rack::Utils.status_code(:internal_server_error)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
   end
 
   class BadGateway < ErrorBase
-    CODE = 502
-    MESSAGE = "Bad Gateway"
+    CODE = Rack::Utils.status_code(:bad_gateway)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
   end
 
   class ServiceUnavailable < ErrorBase
-    CODE = 503
-    MESSAGE = "Service Unavailable"
+    CODE = Rack::Utils.status_code(:service_unavailable)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
   end
 
   class GatewayTimeout < ErrorBase
-    CODE = 504
-    MESSAGE = "Gateway Timeout"
+    CODE = Rack::Utils.status_code(:gateway_timeout)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
   end
 
   class HTTPVersionNotSupported < ErrorBase
-    CODE = 505
-    MESSAGE = "HTTP Version Not Supported"
+    CODE = Rack::Utils.status_code(:http_version_not_supported)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
+  end
+
+  class VariantAlsoNegotiates < ErrorBase
+    CODE = Rack::Utils.status_code(:variant_also_negotiates)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
+  end
+
+  class InsufficientStorage < ErrorBase
+    CODE = Rack::Utils.status_code(:insufficient_storage)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
+  end
+
+  class LoopDetected < ErrorBase
+    CODE = Rack::Utils.status_code(:loop_detected)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
+  end
+
+  class NotExtended < ErrorBase
+    CODE = Rack::Utils.status_code(:not_extended)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
+  end
+
+  class NetworkAuthenticationRequired < ErrorBase
+    CODE = Rack::Utils.status_code(:network_authentication_required)
+    MESSAGE = Rack::Utils::HTTP_STATUS_CODES[CODE]
   end
 end
