@@ -11,7 +11,7 @@ module Sinatra
   module Errorcodes
     def handle_errorcode(e)
       if e.is_a? ErrorBase
-        halt e.code, Rack::Utils::HTTP_STATUS_CODES[e.code]
+        halt e.code, e.msg
       end
     end
   end
