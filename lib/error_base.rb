@@ -1,15 +1,16 @@
 class ErrorBase < StandardError
   def initialize( *message )
-    _v = message.join(' ')
-    @_msg = !_v.empty? ? _v : self.class::MESSAGE
+    _message = message.join(' ')
     @_code = self.class::CODE
+    @_msg = _message.empty? ?
+      Rack::Utils::HTTP_STATUS_CODES[@_code] : _message
   end
 
   def code
     @_code
   end
 
-  def message
+  def msg
     @_msg
   end
 end

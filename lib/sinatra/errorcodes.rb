@@ -9,12 +9,14 @@ module Sinatra
   include HTTPError
 
   module Errorcodes
-    def handle_errorcode(e)
-      if e.is_a? ErrorBase
-        halt e.code, e.message
+    def handle_errorstatus
+      error do |e|
+        if e.is_a? ErrorBase
+          halt e.code, e.msg
+        end
       end
     end
   end
 
-  helpers Errorcodes
+  register Errorcodes
 end

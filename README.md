@@ -5,11 +5,12 @@
 > Gem of HTTP error status code class pack
 
 ## Table of Contents
-- [Installation](#Installation)
-- [Example](#Example)
-- [Test](#Test)
-- [Contribute](#Contribute)
-- [License](#License)
+- [Installation](README.md#Installation)
+- [Usage](README.md#Usage)
+- [Example](README.md#Example)
+- [Test](README.md#Test)
+- [Contribute](README.md#Contribute)
+- [License](README.md#License)
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -21,6 +22,38 @@ gem 'sinatra-errorcodes'
 Or install it yourself as:
 ```bash
 $ gem install sinatra-errorcodes
+```
+
+## Usage
+To use this gem, at first, you need to register `Sinatra::Errorcodes` in your configure block and call `handle_errorstatus` which wraps Sinatra's error handling block. 
+```ruby
+class AppController < Sinatra::Base
+  configure do
+    register Sinatra::Errorcodes
+    
+    handle_errorstatus # Need to add this.
+  end
+end
+```
+
+Now you can use a set of `HTTPError` class in order to halt manually with a specific HTTP status code and its message like below. The all process of these exception raising is done by `handle_errorstatus` you have just added above.
+```ruby
+...
+
+  get '/badrequest'
+    raise HTTPError::BadRequest
+  end
+  
+  get '/error'
+    raise HTTPError::InternalServerError
+  end
+  
+  # You can also raise an exception with your own custom message.
+  get '/custom'
+    raise HTTPError::InternalServerError, 'Custom error message'
+  end
+  
+...
 ```
 
 ## Example

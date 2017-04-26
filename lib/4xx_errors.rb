@@ -1,108 +1,140 @@
 require_relative "./error_base"
 
 module HTTPError
+
+  # 400 Bad Request
   class BadRequest < ErrorBase
-    CODE = 400
-    MESSAGE = "Bad Request"
+    CODE = Rack::Utils.status_code(:bad_request)
   end
 
+  # 401 Unauthorized
   class Unauthorized < ErrorBase
-    CODE = 401
-    MESSAGE = "Unauthorized"
+    CODE = Rack::Utils.status_code(:unauthorized)
   end
 
+  # 402 Payment Required
   class PaymentRequired < ErrorBase
-    CODE = 402
-    MESSAGE = "Payment Required"
+    CODE = Rack::Utils.status_code(:payment_required)
   end
 
+  # 403 Forbidden
   class Forbidden < ErrorBase
-    CODE = 403
-    MESSAGE = "Forbidden"
+    CODE = Rack::Utils.status_code(:forbidden)
   end
 
+  # 404 Not Found
   class NotFound < ErrorBase
-    CODE = 404
-    MESSAGE = "Not Found"
+    CODE = Rack::Utils.status_code(:not_found)
   end
 
-  class MethodNotAllows < ErrorBase
-    CODE = 405
-    MESSAGE = "Method Not Allowed"
+  # 405 Method Not Allowed
+  class MethodNotAllowed < ErrorBase
+    CODE = Rack::Utils.status_code(:method_not_allowed)
   end
 
+  # 406 Not Acceptable
   class NotAccpetable < ErrorBase
-    CODE = 406
-    MESSAGE = "Not Acceptable"
+    CODE = Rack::Utils.status_code(:not_acceptable)
   end
 
+  # 407 Proxy Authentication Required
   class ProxyAuthenticationRequired < ErrorBase
-    CODE = 407
-    MESSAGE = "Proxy Authentication Required"
+    CODE = Rack::Utils.status_code(:proxy_authentication_required)
   end
 
+  # 408 Request Timeout
   class RequestTimeout < ErrorBase
-    CODE = 408
-    MESSAGE = "Request Timeout"
+    CODE = Rack::Utils.status_code(:request_timeout)
   end
 
+  # 409 Conflict
   class Conflict < ErrorBase
-    CODE = 409
-    MESSAGE = "Conflict"
+    CODE = Rack::Utils.status_code(:conflict)
   end
 
+  # 410 Gone
   class Gone < ErrorBase
-    CODE = 410
-    MESSAGE = "Gone"
+    CODE = Rack::Utils.status_code(:gone)
   end
 
+  # 411 Length Required
   class LengthRequired < ErrorBase
-    CODE = 411
-    MESSAGE = "Length Required"
+    CODE = Rack::Utils.status_code(:length_required)
   end
 
+  # 412 Precondition Failed
   class PreconditionFailed < ErrorBase
-    CODE = 412
-    MESSAGE = "Precondition Failed"
+    CODE = Rack::Utils.status_code(:precondition_failed)
   end
 
+  # 413 Payload Too Large
   class PayloadTooLarge < ErrorBase
-    CODE = 413
-    MESSAGE = "Payload Too Large"
+    CODE = Rack::Utils.status_code(:payload_too_large)
   end
 
+  # 414 URI Too Long
   class UriTooLong < ErrorBase
-    CODE = 414
-    MESSAGE = "URI Too Long"
+    CODE = Rack::Utils.status_code(:uri_too_long)
   end
 
+  # 415 Unsupported Media Type
   class UnsupportedMediaType < ErrorBase
-    CODE = 415
-    MESSAGE = "Unsupported Media Type"
+    CODE = Rack::Utils.status_code(:unsupported_media_type)
   end
 
+  # 416 Range Not Satisfiable
   class RangeNotSatisfiable < ErrorBase
-    CODE = 416
-    MESSAGE = "Range Not Satisfiable"
+    CODE = Rack::Utils.status_code(:range_not_satisfiable)
   end
 
+  # 417 Expectation Failed
   class ExpectationFailed < ErrorBase
-    CODE = 417
-    MESSAGE = "Expectation Failed"
+    CODE = Rack::Utils.status_code(:expectation_failed)
   end
 
+  # 421 Misdirected Request
   class MisdirectedRequest < ErrorBase
-    CODE = 421
-    MESSAGE = "Misdirected Request"
+    CODE = Rack::Utils.status_code(:misdirected_failed)
   end
 
+  # 422 Unprocessable Entity
+  class UnprocessableEntity < ErrorBase
+    CODE = Rack::Utils.status_code(:unprocessable_entity)
+  end
+
+  # 423 Locked
+  class Locked < ErrorBase
+    CODE = Rack::Utils.status_code(:locked)
+  end
+
+  # 424 Failed Dependency
+  class FailedDependency < ErrorBase
+    CODE = Rack::Utils.status_code(:failed_dependency)
+  end
+
+  # 426 Upgrade Required
   class UpgradeRequired < ErrorBase
-    CODE = 426
-    MESSAGE = "Upgrade Required"
+    CODE = Rack::Utils.status_code(:upgrade_required)
   end
 
-  class UnavailableForLegalReasons < ErrorBase
-    CODE = 451
-    MESSAGE = "Unavailable For Legal Reasons"
+  # 428 Precondition Required
+  class PreconditionRequired < ErrorBase
+    CODE = Rack::Utils.status_code(:precondition_required)
   end
+
+  # 429 Too Many Requests
+  class TooManyRequests < ErrorBase
+    CODE = Rack::Utils.status_code(:too_many_requests)
+  end
+
+  # 431 Request Header Fields Too Large
+  class RequestHeaderFieldsTooLarge < ErrorBase
+    CODE = Rack::Utils.status_code(:request_header_fields_too_large)
+  end
+
+  # 451 Unavailable For Legal Reasons
+  class UnavailableForLegalReasons < ErrorBase
+    CODE = Rack::Utils.status_code(:unavailable_for_legal_reasons)
+  end
+
 end

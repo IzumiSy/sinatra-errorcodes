@@ -7,12 +7,10 @@ describe Sinatra::Errorcodes do
 
   it 'provides status 500' do
     expect(HTTPError::InternalServerError::CODE).to be 500
-    expect(HTTPError::InternalServerError::MESSAGE).to eq 'Internal Server Error'
   end
 
   it 'provides status 400' do
     expect(HTTPError::BadRequest::CODE).to be 400
-    expect(HTTPError::BadRequest::MESSAGE).to eq 'Bad Request'
   end
 
   it 'returns status 500 ' do
