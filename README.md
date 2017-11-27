@@ -31,13 +31,23 @@ To use this gem, at first, you need to register `Sinatra::Errorcodes` in your co
 class AppController < Sinatra::Base
   configure do
     register Sinatra::Errorcodes
-    
-    handle_errorstatus # Need to add this.
   end
 end
 ```
+Now you can use a set of `HTTPError` class which contains HTTP status code and its message.
 
-Now you can use a set of `HTTPError` class in order to halt manually with a specific HTTP status code and its message like below. The all process of these exception raising is done by `handle_errorstatus` you have just added above.
+### halt_with_errors
+You can use `halt_with_errors` option which is false by default.
+```ruby
+class AppController < Sinatra::Base
+  configure do
+    register Sinatra::Errorcodes
+    
+    set :halt_with_errors, true
+  end
+end
+```
+With the option, errors thrown with `HTTPError` class are caught automatically and call `halt`.
 ```ruby
 ...
 
