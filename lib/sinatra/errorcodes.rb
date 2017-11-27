@@ -11,7 +11,8 @@ module Sinatra
   module Errorcodes
     def self.registered(app)
       app.set :halt_with_errors, false
-      app.error do |e|
+
+      app.error ErrorBase do |e|
         return unless settings.halt_with_errors
         halt e.code, e.msg
       end
