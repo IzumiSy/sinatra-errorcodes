@@ -2,7 +2,6 @@
 [![Gem Version](https://badge.fury.io/rb/sinatra-errorcodes.svg)](https://badge.fury.io/rb/sinatra-errorcodes)
 [![CircleCI](https://circleci.com/gh/IzumiSy/sinatra-errorcodes.svg?style=shield)](https://circleci.com/gh/IzumiSy/sinatra-errorcodes)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![Dependency Status](https://gemnasium.com/badges/github.com/IzumiSy/sinatra-errorcodes.svg)](https://gemnasium.com/github.com/IzumiSy/sinatra-errorcodes)
 > Gem of HTTP error status code class pack
 
 ## Table of Contents
