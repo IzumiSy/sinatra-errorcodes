@@ -1,0 +1,11 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby-2.2.3-jessie
+    steps:
+      - checkout
+      - run: bundle install
+      - run: bundle exec rake spec
+
