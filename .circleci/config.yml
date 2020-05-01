@@ -1,9 +1,8 @@
 version: 2
-
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.6-jessie
+      - image: circleci/ruby:2.6.6
     steps:
       - checkout
       - run: bundle install
