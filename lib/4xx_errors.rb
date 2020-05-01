@@ -94,7 +94,7 @@ module HTTPError
 
   # 421 Misdirected Request
   class MisdirectedRequest < ErrorBase
-    CODE = Rack::Utils.status_code(:misdirected_failed)
+    CODE = Rack::Utils.status_code(:misdirected_request)
   end
 
   # 422 Unprocessable Entity
